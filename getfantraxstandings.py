@@ -10,7 +10,6 @@ import openpyxl
 os.chdir('c:\\Python\\colefitzpatrick_python')
 
 url = "https://www.fantrax.com/login"
-url2 = "https://www.fantrax.com/fantasy/league/v2omq3g1k5phrpoi/home"
 
 wb_write = openpyxl.load_workbook('fantrax.xlsx')
 ws_write = wb_write["Sheet1"]
@@ -49,7 +48,7 @@ driver.execute_script("arguments[0].click();", myleague)
 
 driver.implicitly_wait(3)
 
-#xpath components that do not change
+#xpath components that do not change for the standings table
 path1 = '/html/body/app-root/div/div[2]/div/app-league-home/div/section/div/div[1]/league-home-standings/pane/section/div[2]/div/league-home-standings-content/table/tbody['
 path2 = ']/tr['
 path_team = ']/td[2]/a'
